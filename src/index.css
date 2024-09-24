@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trully-response {
+  width: 90vw;
+  max-width: 650px;
+  background-color: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: 16px;
+  box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 768px) {
+  .trully-response {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.trully-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img {
+  width: clamp(100px, 100%, 200px);
+  align-self: center;
+}
+
+.trully-text {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.trully-button {
+  display: flex;
+  width: 100%;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 52px;
+  color: rgb(255, 255, 255);
+  background: rgb(71, 95, 255);
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.09), 0px 1px 1px 0px;
+  cursor: pointer;
+}
+
+.trully-button:hover {
+  background: #001063;
+}
+
+.red {
+  color: #D51F11;
+}
+
+.yellow {
+  color: #ECBA09;
+}
+
+.green {
+  color: #008800;
+}
