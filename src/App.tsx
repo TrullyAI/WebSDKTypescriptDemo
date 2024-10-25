@@ -1,4 +1,4 @@
-import { DMResponse, TrullySdkWeb } from "@trully/trully-sdk-react";
+import { DMResponse, TrullySdkWeb } from "@trully/trully-react-components-npm";
 import { useState } from "react";
 
 function App() {

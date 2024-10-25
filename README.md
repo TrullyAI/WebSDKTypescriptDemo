@@ -1,9 +1,9 @@
 # Web SDK Typescript Demo
 
 This demo was created following the steps detailed in the
-[Docs](https://www.npmjs.com/package/@trully/trully-sdk-react)
+[Docs](https://github.com/TrullyAI/TrullySdkWebDocs)
 
-#### SDK version 1.0.0
+#### Trully components version 1.0.0
 
 ## How to use it
 
