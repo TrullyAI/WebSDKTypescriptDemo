@@ -1,9 +1,9 @@
-import { DMResponse, TrullySdkWeb } from "@trully/trully-sdk-react";
+import { SDKResponse, TrullySdkWeb } from "@trully/trully-sdk-react";
 import { useState } from "react";
 
 function App() {
   const [gettingResults, setGettingResults] = useState(true);
-  const [response, setResponse] = useState<DMResponse | null>(null);
+  const [response, setResponse] = useState<SDKResponse | null>(null);
 
   const setLabelColor = (label?: string) => {
     switch (label) {
@@ -56,7 +56,7 @@ function App() {
       ) : (
         <div className="trully-container trully-response">
           <img
-            src="https://trully-api-documentation.s3.amazonaws.com/trully-sdk/logo-trully.svg"
+            src="https://trully-api-documentation.s3.amazonaws.com/trully-sdk/logo-trully-unico.svg"
             alt="logo"
             className="trully-logo"
           />
@@ -84,9 +84,7 @@ function App() {
               <div className="image">
                 <h4>Dorso recortado</h4>
                 <img
-                  src={
-                    getImageUrl(response?.document_image_back) ?? "./card.png"
-                  }
+                  src={getImageUrl(response?.document_back) ?? "./card.png"}
                   className="trully-id"
                   alt="icon"
                 />
@@ -95,7 +93,7 @@ function App() {
                 <h4>Dorso completo</h4>
                 <img
                   src={
-                    getImageUrl(response?.document_image_back_complete) ??
+                    getImageUrl(response?.document_back_complete) ??
                     "./card.png"
                   }
                   className="trully-id"
