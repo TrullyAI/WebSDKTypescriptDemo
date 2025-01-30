@@ -1,4 +1,4 @@
-import { SDKResponse, TrullySdkWeb } from "@trully/trully-sdk-react";
+import { ErrorType, SDKResponse, TrullySdkWeb } from "@trully/trully-sdk-react";
 import { useState } from "react";
 
 function App() {
@@ -18,6 +18,24 @@ function App() {
     }
   };
 
+  const handleData = (response: SDKResponse) => {
+    setGettingResults(() => {
+      setResponse(response);
+      return false;
+    });
+  };
+
+  const handleError = (error: ErrorType) => {
+    console.log(error);
+  };
+
+  const handleClick = () => {
+    setGettingResults(() => {
+      setResponse(null);
+      return true;
+    });
+  };
+
   return (
     <>
       {gettingResults ? (
@@ -26,15 +44,8 @@ function App() {
             isDev: true,
             apiKey: "YOUR_API_KEY",
             user_id: "YOUR_USER_ID",
-            handleData: (response) => {
-              setGettingResults(() => {
-                setResponse(response);
-                return false;
-              });
-            },
-            handleError: (error) => {
-              console.log(error);
-            },
+            handleData,
+            handleError,
           }}
         />
       ) : (
@@ -109,12 +120,7 @@ function App() {
             </div>
             <button
               className="trully-button trully-button-text"
-              onClick={() => {
-                setGettingResults(() => {
-                  setResponse(null);
-                  return true;
-                });
-              }}
+              onClick={handleClick}
             >
               Reintentar
             </button>

@@ -3,7 +3,7 @@
 This demo was created following the steps detailed in the
 [Docs](https://github.com/TrullyAI/TrullySdkWebDocs)
 
-#### Trully SDK Web version 2.0.2
+#### Trully SDK Web version 2.2.1
 
 ## How to use it
 
